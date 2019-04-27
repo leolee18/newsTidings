@@ -10,7 +10,7 @@ import {mapGetters} from 'vuex';
 export default {
 	data () {
 		return {
-			appHead:require('@/assets/logo.png')
+			appHead:require('@/assets/head_img.jpg')
 		}
 	},
 	computed:{
@@ -61,7 +61,7 @@ export default {
 		height:auto;
 		min-height:100%;
 		margin:0 auto;
-		background-color:#eee;
+		background-color:#fff;
 	}
 	.all-img{
 		position: relative;
@@ -83,7 +83,7 @@ export default {
 		position:relative;
 		display: block;
 		width:750px;
-		height:200px;
+		height:320px;
 		background-color:#ccc;
 	}
 </style>

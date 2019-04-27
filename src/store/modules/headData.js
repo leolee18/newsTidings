@@ -3,7 +3,7 @@ import types from '../types.js'
 const state={
 	headImg:'',
 	headLink:'',
-	headText:'测试'
+	headText:'新闻动态'
 }
 
 const getters={

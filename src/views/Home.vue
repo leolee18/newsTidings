@@ -1,16 +1,16 @@
 <template>
-  <div class="home">
+	<div class="home">
 		<div class="home-title">
-			<img src="../assets/logo.png" class="home-title-img">
+			<img src="@/assets/head_tit_bg.jpg" class="home-title-img">
 			<span class="home-title-text">{{headText}}</span>
 		</div>
 		<div class="tab-all">
-			<div class="tab-all-one" :class="{'tab-all-one-tc':tab1class}" v-on:click="tab1fun">1枯士大夫</div>
-			<div class="tab-all-one" :class="{'tab-all-one-tc':tab2class}" v-on:click="tab2fun">2枯士大夫</div>
-			<div class="tab-all-one" :class="{'tab-all-one-tc':tab3class}" v-on:click="tab3fun">3枯士大夫</div>
+			<div class="tab-all-one" :class="{'tab-all-one-tc':tab1class}" v-on:click="tab1fun">企业资讯</div>
+			<div class="tab-all-one" :class="{'tab-all-one-tc':tab2class}" v-on:click="tab2fun">行业动态</div>
+			<div class="tab-all-one" :class="{'tab-all-one-tc':tab3class}" v-on:click="tab3fun">视频专区</div>
 		</div>
-    <router-view/>
-  </div>
+		<router-view/>
+	</div>
 </template>
 
 <script>
@@ -72,15 +72,14 @@ export default {
 	.home-title{
 		position:relative;
 		width: 750px;
-		height: 50px;
+		height: 75px;
 		overflow: hidden;
-		background-color: #42B983;
 	}
 	.home-title-img{
 		position:absolute;
 		display: block;
 		width: 750px;
-		height: 50px;
+		height:75px;
 		top:0;
 		z-index: 0;
 	}
@@ -88,50 +87,38 @@ export default {
 		position:absolute;
 		display: block;
 		width: 750px;
-		height: 50px;
+		height: 75px;
 		top:0;
 		z-index: 2;
-		font-size: 40px;
-		color: #3E3A39;
-		line-height: 50px;
+		font-size: 34px;
+		color: #666666;
+		line-height: 75px;
 		text-align: center;
-		font-weight: bold;
 	}
 	
 	.tab-all{
 		position: relative;
 		width: 100%;
-		height: 100px;
+		height: 110px;
+		margin-top: 15px;
 		display: flex;
 		justify-content:space-around;
 		align-items: center;
-		background-color: cadetblue;
 	}
 	.tab-all-one{
-		width: 100px;
-		height: 50px;
+		width: 180px;
+		height: 60px;
 		font-size: 20px;
-		line-height:50px;
+		line-height:60px;
 		text-align: center;
-		color:#9faebf;
-		background-color: #0079FF;
+		color:#333;
+		font-weight: bold;
+		border-radius: 10px;
+		background-color: #eee;
 	}
 	.tab-all-one-tc{
-		color:#0079ff;
-		background-color: #42B983;
+		color:#fff;
+		background-color: #00a443;
 	}
 	
-	
-	.load-img{
-		display: block;
-		width: 20%;
-	}
-	.load-text{
-		display: block;
-		width: 100%;
-		font-size: 35px;
-		margin-top: 50px;
-		color: #666;
-		text-align: center;
-	}
 </style>
