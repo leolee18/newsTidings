@@ -1,30 +1,30 @@
 <template>
 	<div class="tab-list-one" v-bind:data-pid="onedata.id">
-		<img :src="onedata.thumb" class="tab-list-one-himg evno" />
-		<div class="tab-list-one-title evno">{{onedata.title}}</div>
-		<div class="tab-list-one-cont evno">{{onedata.description}}</div>
-		<div class="tab-list-one-date evno">来源：{{onedata.keyword?onedata.keyword:'麻姑集团'}}<span class="tab-mar-left">日期：{{dateFormat(onedata.addtime)}}</span></div>
+		<div class="tab-list-one-himg">
+			<mvideo :options="playerOptions"></mvideo>
+		</div>
+		<div class="tab-list-one-title evno">2018中国区域农业品牌影响力</div>
+		<div class="tab-list-one-date evno">来源：中国农业网</div>
 	</div>
 </template>
 
 <script>
+	import mvideo from '@/components/mvideo.vue'
 	export default {
+		data () {
+			return {
+				playerOptions:{
+					poster:'http://51coach.com/xcxcl/images/courseimg/20181203111536685.png',
+					src:'http://51coach.com/xcxcl/videos/course/20170327165100598.mp4'
+				}
+			}
+		},
 		props: {
 			onedata: Object
 		},
-		methods: {
-			dateFormat(mTime) {
-				let date=new Date(mTime);
-				let year=date.getFullYear();
-				let month= date.getMonth()+1<10 ? "0"+(date.getMonth()+1) : date.getMonth()+1;
-				let day=date.getDate()<10 ? "0"+date.getDate() : date.getDate();
-				let hours=date.getHours()<10 ? "0"+date.getHours() : date.getHours();
-				let minutes=date.getMinutes()<10 ? "0"+date.getMinutes() : date.getMinutes();
-				let seconds=date.getSeconds()<10 ? "0"+date.getSeconds() : date.getSeconds();
-				// 拼接
-				return year+"/"+month+"/"+day;
-			}
-		}
+		components: {
+			mvideo
+		},
 	}
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->

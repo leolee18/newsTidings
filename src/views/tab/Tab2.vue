@@ -22,6 +22,7 @@ export default {
 	},
 	mounted(){
 		var self = this;
+		self.$store.dispatch('setHeadText','行业动态');
 		self.$store.dispatch('initTab2List',{});
 	},
 	methods: {

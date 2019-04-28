@@ -2,17 +2,13 @@ const axios = require('axios');
 
 function serAdd(addres){
 	var serUrl = 'http://'+window.location.host+'/';
-	var serInter = 'http://51coach.com/wwlyweb/';
+	var serInter = 'http://www.jxmgjt.com/magu_api/';
 	
-	var kc = 'interface/';
+	var kc = '';
 	var returnStr = serUrl;
 	switch (addres){
-		case 'all.php'://页面数据集
-		case 'wxLogin.php'://登录
+		case 'response.php':
 			returnStr = serInter+kc+addres;
-			break;
-		case 'sample.php'://分享参数
-			returnStr = 'http://51coach.com/msdweb/server/'+addres;
 			break;	
 		case 'local':
 			returnStr = serUrl;
@@ -60,7 +56,7 @@ function serUrl(url){
 	if(myUrl.length > 5){
 		var myType = url.substr(0,5);
     if (myType != "http:" && myType != "wxfil" && myType != "https"){
-			myUrl = 'http://v.51coach.com/wwlyweb/' + myUrl;
+			myUrl = 'http://www.jxmgjt.com' + myUrl;
 		}
 	}
 	return myUrl;

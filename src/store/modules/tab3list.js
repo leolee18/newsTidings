@@ -18,28 +18,13 @@ const getters={
 
 const actions={
 	initTab3List({commit,state},param){
-		let senObj = {
-    		action: 'list'
-    }
+		let senObj = {}
 		commit(types.TABS_STATE,1);
-		
 		commit(types.INIT_TABS_LIST,[{name:'大是大非',id:'11'},{name:'工在',id:'12'},{name:'脸有',id:'13'},{name:'于地',id:'14'},{name:'在士大夫',id:'15'}]);
-		/* ser.mPost('all.php',{}).then((msg)=>{
-			if(msg.status == 'success'){
-				commit(types.INIT_TABS_LIST,msg.cont);
-			}
-		}) */
 	},
 	addTab3List({commit,state},param){
-		let senObj = {
-			action: 'list',
-		}
+		let senObj = {}
 		commit(types.TABS_STATE,1);
-		// ser.mPost('all.php',{}).then((msg)=>{
-		// 	if(msg.status == 'success'){
-		// 		commit(types.ADD_TABS_LIST,msg.cont);
-		// 	}
-		// })
 	}
 }
 const mutations={

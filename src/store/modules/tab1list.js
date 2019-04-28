@@ -19,32 +19,32 @@ const getters={
 const actions={
 	initTab1List({commit,state},param){
 		let senObj = {
-    		action: 'list'
-    }
+    		cid:19,
+			pid:2,
+			page:0
+		}
 		commit(types.TABO_STATE,1);
-		
-		commit(types.INIT_TABO_LIST,[{name:'大是大非',id:'1'},{name:'工在',id:'2'},{name:'脸有',id:'3'},{name:'于地',id:'4'},{name:'在士大夫',id:'5'}]);
-		// ser.mPost('all.php',{}).then((msg)=>{
-		// 	if(msg.status == 'success'){
-		// 		commit(types.INIT_TABO_LIST,msg.cont);
-		// 	}
-		// })
+		ser.mPost('response.php',senObj).then((msg)=>{
+			if(msg[0]){
+				commit(types.INIT_TABO_LIST,msg[0]);
+			}
+		})
 	},
 	addTab1List({commit,state},param){
 		let senObj = {
-			action: 'list',
+			cid:19,
+			pid:2,
+			page:0
 		}
 		commit(types.TABO_STATE,1);
-		// ser.mPost('all.php',{}).then((msg)=>{
-		// 	if(msg.status == 'success'){
-		// 		commit(types.ADD_TABO_LIST,msg.cont);
-		// 	}
-		// })
 	}
 }
 const mutations={
 	[types.INIT_TABO_LIST](state,data){
-		state.tab1Arr=data;
+		state.tab1Arr=data.code;
+		state.tab1Arr.forEach(function(val,ind){
+			val.thumb = ser.serUrl(val.thumb);
+		})
 		if (true) {
 			state.tab1State=0;
 			state.tab1Pnum += 10;
