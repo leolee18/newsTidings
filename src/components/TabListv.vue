@@ -1,10 +1,10 @@
 <template>
 	<div class="tab-list-one" v-bind:data-pid="onedata.id">
 		<div class="tab-list-one-himg">
-			<mvideo :options="playerOptions"></mvideo>
+			<mvideo :options="onedata"></mvideo>
 		</div>
-		<div class="tab-list-one-title evno">2018中国区域农业品牌影响力</div>
-		<div class="tab-list-one-date evno">来源：中国农业网</div>
+		<div class="tab-list-one-title evno">{{onedata.title}}</div>
+		<div class="tab-list-one-date evno">来源：{{onedata.keyword?onedata.keyword:'麻姑集团'}}</div>
 	</div>
 </template>
 
@@ -13,10 +13,6 @@
 	export default {
 		data () {
 			return {
-				playerOptions:{
-					poster:'http://51coach.com/xcxcl/images/courseimg/20181203111536685.png',
-					src:'http://51coach.com/xcxcl/videos/course/20170327165100598.mp4'
-				}
 			}
 		},
 		props: {
@@ -27,7 +23,6 @@
 		},
 	}
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 	.tab-list-one{
 		position: relative;

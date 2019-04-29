@@ -20,7 +20,12 @@ const actions={
 	initTab3List({commit,state},param){
 		let senObj = {}
 		commit(types.TABS_STATE,1);
-		commit(types.INIT_TABS_LIST,[{name:'大是大非',id:'11'},{name:'工在',id:'12'},{name:'脸有',id:'13'},{name:'于地',id:'14'},{name:'在士大夫',id:'15'}]);
+		commit(types.INIT_TABS_LIST,[
+			{keyword:'麻姑集团',title:'麻姑集团专题片',poster:'/assets/images/video-poster-1.jpg',src:'/1.mp4'},
+			{keyword:'央视网',title:'2019年初央视广告片（新闻30分）',poster:'/assets/images/video-poster-2.jpg',src:'/2.mp4'},
+			{keyword:'央视网',title:'2018年初央视广告片',poster:'/assets/images/video-poster-3.jpg',src:'/3.mp4'},
+			{keyword:'江西公共农业频道',title:'稻花香里电视专题片',poster:'/assets/images/video-poster-4.jpg',src:'/4.mp4'}
+		]);
 	},
 	addTab3List({commit,state},param){
 		let senObj = {}
@@ -30,6 +35,10 @@ const actions={
 const mutations={
 	[types.INIT_TABS_LIST](state,data){
 		state.tab3Arr=data;
+		state.tab3Arr.forEach(function(val,ind){
+			val.poster = ser.serUrl(val.poster);
+			val.src = ser.serUrl(val.src);
+		})
 		if (true) {
 			state.tab3State=0;
 			state.tab3Pnum += 10;

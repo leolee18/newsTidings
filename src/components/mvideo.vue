@@ -11,7 +11,6 @@
 </template>
 
 <script>
-	//autoplay
 	export default {
 		props:['options']
 	}
