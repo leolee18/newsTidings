@@ -1,6 +1,6 @@
 <template>
-  <div class="body_all" id="app">
-		<img :src="appHead" class="head_img" @click="hadClick" />
+  <div class="body_all">
+	<img :src="appHead" class="head_img" @click="hadClick" />
     <router-view/>
   </div>
 </template>
@@ -86,4 +86,5 @@ export default {
 		height:320px;
 		background-color:#ccc;
 	}
+	
 </style>

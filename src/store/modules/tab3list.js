@@ -24,7 +24,9 @@ const actions={
 			{keyword:'麻姑集团',title:'麻姑集团专题片',poster:'/assets/images/video-poster-1.jpg',src:'/1.mp4'},
 			{keyword:'央视网',title:'2019年初央视广告片（新闻30分）',poster:'/assets/images/video-poster-2.jpg',src:'/2.mp4'},
 			{keyword:'央视网',title:'2018年初央视广告片',poster:'/assets/images/video-poster-3.jpg',src:'/3.mp4'},
-			{keyword:'江西公共农业频道',title:'稻花香里电视专题片',poster:'/assets/images/video-poster-4.jpg',src:'/4.mp4'}
+			{keyword:'江西公共农业频道',title:'稻花香里电视专题片',poster:'/assets/images/video-poster-4.jpg',src:'/4.mp4'},
+			{keyword:'麻姑集团',title:'麻姑米宣传片',poster:'/wap/images/1-1.png',src:'/5.mp4'},
+			{keyword:'麻姑集团',title:'麻姑米 传千年沙画',poster:'/wap/images/1-2.png',src:'/6.mp4'}
 		]);
 	},
 	addTab3List({commit,state},param){

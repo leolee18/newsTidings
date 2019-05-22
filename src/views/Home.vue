@@ -89,7 +89,7 @@ export default {
 		width: 750px;
 		height: 75px;
 		top:0;
-		z-index: 2;
+		z-index: 0;
 		font-size: 34px;
 		color: #666666;
 		line-height: 75px;
