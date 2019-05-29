@@ -48,7 +48,7 @@ export default new Router({
       name: 'detailed',
       component: () => import('@/views/Detailed.vue'),
 			meta: {
-				title: 'detailed'
+				title: '新闻中心'
 			},
     },
 		{

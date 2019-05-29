@@ -43,22 +43,21 @@
 	}
 	.tab-list-one-title{
 		position: relative;
-		max-height: 100px;
-		font-size: 30px;
+		font-size: 24px;
 		color: #333;
 		line-height: 50px;
 		margin-top: 20px;
 	}
 	.tab-list-one-cont{
 		position: relative;
-		font-size:18px;
+		font-size:14px;
 		color: #777777;
 		line-height: 30px;
 		margin-top: 10px;
 	}
 	.tab-list-one-date{
 		position: relative;
-		font-size:16px;
+		font-size:12px;
 		color: #cccccc;
 		line-height: 30px;
 		margin-top: 20px;
