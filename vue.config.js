@@ -3,6 +3,7 @@ module.exports = {
   baseUrl: './',
   // 输出文件目录
   outputDir: 'dist',
+	productionSourceMap: false,
   // webpack-dev-server 相关配置
   devServer: {
     port: 8080,
