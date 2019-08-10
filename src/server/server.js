@@ -2,7 +2,7 @@ const axios = require('axios');
 
 function serAdd(addres){
 	var serUrl = 'http://'+window.location.host+'/';
-	var serInter = 'http://www.jxmgjt.com/magu_api/';
+	var serInter = 'https://www.jxmgjt.com/magu_api/';
 	
 	var kc = '';
 	var returnStr = serUrl;
